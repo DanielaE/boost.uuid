@@ -81,7 +81,7 @@ void test_quick()
 
     for (int i=0; i!=sizeof(cases)/sizeof(cases[0]); ++i) {
         test_case const& tc = cases[i];
-        test_sha1(tc.message, std::strlen(tc.message), tc.digest);
+        test_sha1(tc.message, static_cast<unsigned>(std::strlen(tc.message)), tc.digest);
     }
 }
 
